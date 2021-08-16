@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>bmi</title>
+    <script>
+        function bmi()
+        {
+            var height = parseFloat(document.getElementById("h").value)
+            var weight = parseFloat(document.getElementById("w").value)
+            var bmi = weight/(height*height)
+            var userBMI = document.getElementById("bmi_index")
+            userBMI.textContent=bmi.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    height<input type="text" id="h"><br><br>
+    weight<input type="text" id="b"><br><br>
+    <input type="button" value="calculate" onclick="bmi()">
+    <h2 class="text-input">BMI=<b id="bmi_index"></b></h2>
+</body>
+</html>
